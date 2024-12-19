@@ -13,7 +13,7 @@ export default function App() {
             source={Asset.fromModule(require("./assets/bussiness-man.png"))}
             style={styles.image}
           ></Image>
-          <Text style={styles.header}>Minh Long Vu</Text>
+          <MyText style={styles.header}>Minh Long Vu</MyText>
         </View>
         <View style={styles.section}>
           <MyText>Contact Information</MyText>
@@ -25,6 +25,10 @@ export default function App() {
             <MyText style={{ fontWeight: "bold" }}>Phone: </MyText>
             <MyText>(123) 456 7890</MyText>
           </MyText>
+        </View>
+        <View style={styles.section}>
+          <MyText>Experiences</MyText>
+          <MyText></MyText>
         </View>
         <StatusBar style="auto" />
       </SafeAreaView>
@@ -56,5 +60,6 @@ const styles = StyleSheet.create({
   },
   section: {
     alignSelf: "flex-start",
+    marginTop: 10,
   },
 });
