@@ -16,7 +16,7 @@ export default function App() {
           <MyText style={styles.header}>Minh Long Vu</MyText>
         </View>
         <View style={styles.section}>
-          <MyText>Contact Information</MyText>
+          <MyText style={{ fontWeight: "bold" }}>Contact Information</MyText>
           <MyText>
             <MyText style={{ fontWeight: "bold" }}>Email: </MyText>
             <MyText>vu-m66@webmail.uwinnipeg.ca</MyText>
@@ -27,8 +27,17 @@ export default function App() {
           </MyText>
         </View>
         <View style={styles.section}>
-          <MyText>Experiences</MyText>
-          <MyText></MyText>
+          <MyText style={{ fontWeight: "bold" }}>Experiences</MyText>
+          <View>
+            <MyText>Skip The Dishes</MyText>
+            <MyText>Chief Executive Officer - 2018</MyText>
+            <MyText>Product Development Manager - 2016</MyText>
+          </View>
+          <View>
+            <MyText>Sun Microsystem</MyText>
+            <MyText>Project Manager - 2015</MyText>
+            <MyText>Sofware Developer - 2010</MyText>
+          </View>
         </View>
         <StatusBar style="auto" />
       </SafeAreaView>
@@ -40,7 +49,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
     padding: 10,
   },
   header: {
@@ -51,7 +59,6 @@ const styles = StyleSheet.create({
   profile: {
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-evenly",
   },
   image: {
     height: 70,
