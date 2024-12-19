@@ -1,10 +1,23 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TextInput, Button } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Asset } from "expo-asset";
 import MyText from "./components/MyText";
+import { useState } from "react";
 
 export default function App() {
+  const [hobbies, setHobbies] = useState(["Coding", "Reading", "Photography"]);
+
+  function renderHobbies() {
+    return (
+      <View style={{ paddingLeft: 10 }}>
+        {hobbies.map((hobby) => (
+          <MyText key={hobby}>{hobby}!</MyText>
+        ))}
+      </View>
+    );
+  }
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -39,6 +52,10 @@ export default function App() {
             <MyText>Sofware Developer - 2010</MyText>
           </View>
         </View>
+        <View style={styles.section}>
+          <MyText style={{ fontWeight: "bold" }}>Hobbies</MyText>
+          {renderHobbies()}
+        </View>
         <StatusBar style="auto" />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -66,7 +83,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   section: {
-    alignSelf: "flex-start",
+    alignSelf: "stretch",
     marginTop: 10,
     width: "100%",
     paddingLeft: 8,
@@ -77,5 +94,22 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: 8,
+    alignSelf: "stretch",
+  },
+  inputView: {},
+  input: {
+    fontSize: 18,
+    borderWidth: 1,
+    marginBottom: 5,
+    padding: 4,
+    borderRadius: 5,
+    width: "100%",
+  },
+  box: {
+    borderColor: "green",
+    backgroundColor: "green",
+    borderStyle: "solid",
+    borderWidth: 2,
+    borderRadius: 5,
   },
 });
