@@ -49,7 +49,7 @@ export default function App() {
           <View style={styles.title}>
             <MyText>Sun Microsystem</MyText>
             <MyText>Project Manager - 2015</MyText>
-            <MyText>Sofware Developer - 2010</MyText>
+            <MyText>Software Developer - 2010</MyText>
           </View>
         </View>
         <View style={styles.section}>
@@ -95,21 +95,5 @@ const styles = StyleSheet.create({
   title: {
     marginBottom: 8,
     alignSelf: "stretch",
-  },
-  inputView: {},
-  input: {
-    fontSize: 18,
-    borderWidth: 1,
-    marginBottom: 5,
-    padding: 4,
-    borderRadius: 5,
-    width: "100%",
-  },
-  box: {
-    borderColor: "green",
-    backgroundColor: "green",
-    borderStyle: "solid",
-    borderWidth: 2,
-    borderRadius: 5,
   },
 });
