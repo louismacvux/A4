@@ -26,6 +26,15 @@ export default function App() {
             <MyText>(123) 456 7890</MyText>
           </MyText>
         </View>
+        <View style={styles.section}>
+          <MyText>Hobbies</MyText>
+          <View style={styles.grid}>
+            <Text>Coding</Text>
+            <Text>Reading</Text>
+            <Text>Cooking</Text>
+            <Text>Coding</Text>
+          </View>
+        </View>
         <StatusBar style="auto" />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -57,4 +66,5 @@ const styles = StyleSheet.create({
   section: {
     alignSelf: "flex-start",
   },
+  grid: {},
 });
