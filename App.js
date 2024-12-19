@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Asset } from "expo-asset";
+import MyText from "./components/MyText";
 
 export default function App() {
   return (
@@ -15,15 +16,15 @@ export default function App() {
           <Text style={styles.header}>Minh Long Vu</Text>
         </View>
         <View style={styles.section}>
-          <Text>Contact Information</Text>
-          <Text>
-            <Text style={{ fontWeight: "bold" }}>Email: </Text>
-            <Text>vu-m66@webmail.uwinnipeg.ca</Text>
-          </Text>
-          <Text>
-            <Text style={{ fontWeight: "bold" }}>Phone: </Text>
-            <Text>(123) 456 7890</Text>
-          </Text>
+          <MyText>Contact Information</MyText>
+          <MyText>
+            <MyText style={{ fontWeight: "bold" }}>Email: </MyText>
+            <MyText>vu-m66@webmail.uwinnipeg.ca</MyText>
+          </MyText>
+          <MyText>
+            <MyText style={{ fontWeight: "bold" }}>Phone: </MyText>
+            <MyText>(123) 456 7890</MyText>
+          </MyText>
         </View>
         <StatusBar style="auto" />
       </SafeAreaView>
