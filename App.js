@@ -28,12 +28,12 @@ export default function App() {
         </View>
         <View style={styles.section}>
           <MyText style={{ fontWeight: "bold" }}>Experiences</MyText>
-          <View>
+          <View style={styles.title}>
             <MyText>Skip The Dishes</MyText>
             <MyText>Chief Executive Officer - 2018</MyText>
             <MyText>Product Development Manager - 2016</MyText>
           </View>
-          <View>
+          <View style={styles.title}>
             <MyText>Sun Microsystem</MyText>
             <MyText>Project Manager - 2015</MyText>
             <MyText>Sofware Developer - 2010</MyText>
@@ -68,5 +68,14 @@ const styles = StyleSheet.create({
   section: {
     alignSelf: "flex-start",
     marginTop: 10,
+    width: "100%",
+    paddingLeft: 8,
+    paddingTop: 5,
+    paddingBottom: 5,
+    borderRadius: 10,
+    backgroundColor: "#f3f3f3",
+  },
+  title: {
+    marginBottom: 8,
   },
 });
